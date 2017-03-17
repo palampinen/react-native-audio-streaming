@@ -2,7 +2,7 @@
 # react-native-audio-streaming
 
 ## Whappu
-This is Whappu edition
+This is Whappu edition used in [Whappu client](https://github.com/futurice/wappuapp-client)
 
 Changes:
 - lock screen image for iOS
