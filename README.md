@@ -1,6 +1,14 @@
 
 # react-native-audio-streaming
 
+## Whappu
+This is Whappu edition
+
+Changes:
+- lock screen image for iOS
+- Sticky notification styled for Android
+- Custom status bar icon for Android when radio is playing
+
 ## Features
 
 - Background audio streaming of remote stream
