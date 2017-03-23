@@ -444,7 +444,7 @@ RCT_EXPORT_METHOD(getStatus: (RCTResponseSenderBlock) callback)
       NSMutableDictionary *nowPlayingInfo = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                       self.currentSong ? self.currentSong : @"", MPMediaItemPropertyAlbumTitle,
                                       @"", MPMediaItemPropertyAlbumArtist,
-                                      appName ? "Whappu" : @"AppName", MPMediaItemPropertyTitle,
+                                      appName ? @"Whappu" : @"AppName", MPMediaItemPropertyTitle,
                                       [NSNumber numberWithFloat:isPlaying ? 1.0f : 0.0], MPNowPlayingInfoPropertyPlaybackRate, nil];
       nowPlayingInfo[MPMediaItemPropertyArtwork] = artwork;
 
