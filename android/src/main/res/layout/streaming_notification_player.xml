@@ -22,12 +22,22 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="50dp">
+                <TextView
+                    android:id="@+id/song_name_notification"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:textAlignment="gravity"
+                    android:textSize="16dp"
+                    android:textColor="#ffffff"
+                    />
                 <ImageButton
                     android:id="@+id/btn_streaming_notification_play"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
                     android:background="#ec449c"
                     android:src="@android:drawable/ic_media_play" />
                 <ImageButton
@@ -36,17 +46,8 @@
                     android:layout_height="50dp"
                     android:layout_toRightOf="@+id/btn_streaming_notification_play"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginRight="10dp"
                     android:background="#ec449c"
                     android:src="@android:drawable/ic_menu_close_clear_cancel" />
-                <TextView
-                    android:id="@+id/song_name_notification"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="left|center_vertical"
-                    android:textAlignment="gravity"
-                    android:textColor="#ffffff"
-                    />
             </LinearLayout>
         </RelativeLayout>
     </RelativeLayout>
