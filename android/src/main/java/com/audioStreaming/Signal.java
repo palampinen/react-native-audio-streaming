@@ -167,10 +167,11 @@ public class Signal extends Service implements OnErrorListener,
     public void showNotification() {
         remoteViews = new RemoteViews(context.getPackageName(), R.layout.streaming_notification_player);
         notifyBuilder = new NotificationCompat.Builder(this.context)
-                .setSmallIcon(R.mipmap.whappu_small) // TODO Use app icon instead
+                .setSmallIcon(R.mipmap.whappu_small)
                 .setContentText("")
-                .setOngoing(true)
-                .setContent(remoteViews);
+                .setOngoing(false)
+                .setContent(remoteViews)
+                .setDeleteIntent(makePendingIntent(BROADCAST_EXIT));
 
         Intent resultIntent = new Intent(this.context, this.clsActivity);
         resultIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -276,7 +277,7 @@ public class Signal extends Service implements OnErrorListener,
     public boolean onError(MediaPlayer mp, int what, int extra) {
         switch (what) {
             case MediaPlayer.MEDIA_ERROR_NOT_VALID_FOR_PROGRESSIVE_PLAYBACK:
-                //Log.v("ERROR", "MEDIA ERROR NOT VALID FOR PROGRESSIVE PLAYBACK "	+ extra);
+                //Log.v("ERROR", "MEDIA ERROR NOT VALID FOR PROGRESSIVE PLAYBACK " + extra);
                 break;
             case MediaPlayer.MEDIA_ERROR_SERVER_DIED:
                 //Log.v("ERROR", "MEDIA ERROR SERVER DIED " + extra);
