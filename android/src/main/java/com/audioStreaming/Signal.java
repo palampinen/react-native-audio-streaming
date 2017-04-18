@@ -189,6 +189,10 @@ public class Signal extends Service implements OnErrorListener,
         remoteViews.setOnClickPendingIntent(R.id.btn_streaming_notification_stop, makePendingIntent(BROADCAST_EXIT));
         notifyManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         notifyManager.notify(NOTIFY_ME_ID, notifyBuilder.build());
+
+        // Should keep app foreground
+        // and prevent from OS cleaning as background process
+        startForeground(NOTIFY_ME_ID, notifyBuilder.build());
     }
 
     private PendingIntent makePendingIntent(String broadcast) {
